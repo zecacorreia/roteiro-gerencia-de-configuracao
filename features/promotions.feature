@@ -12,3 +12,8 @@ Feature: Promotions
     Given I am logged in as admin
     When I create a promotion with discount "-5"
     Then I see the error "Invalid discount"
+
+  Scenario: Create duplicated promotion
+    Given the promotion "15OFF" exists
+    When I create a promotion "15OFF"
+    Then I see the error "Promotion already exists"
