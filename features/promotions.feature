@@ -7,3 +7,8 @@ Feature: Promotions
     Given I am logged in as admin
     When I create a promotion "15OFF"
     Then the promotion "15OFF" is listed
+
+  Scenario: Create promotion with invalid discount
+    Given I am logged in as admin
+    When I create a promotion with discount "-5"
+    Then I see the error "Invalid discount"
