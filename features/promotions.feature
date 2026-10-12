@@ -17,3 +17,7 @@ Feature: Promotions
     Given the promotion "15OFF" exists
     When I create a promotion "15OFF"
     Then I see the error "Promotion already exists"
+
+  Scenario: Promotion expires
+    Given a promotion with end date yesterday
+    Then it is not applicable
