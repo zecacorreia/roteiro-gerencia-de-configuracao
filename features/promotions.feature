@@ -28,3 +28,7 @@ Feature: Promotions
     When I apply "15OFF"
     Then the total is 85 reais
     And the promotion usage count is 1
+
+  Scenario: Promotion for first purchase
+    Given I am a new customer
+    Then I get 5% discount
