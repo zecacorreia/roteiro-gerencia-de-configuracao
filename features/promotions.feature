@@ -27,3 +27,4 @@ Feature: Promotions
     Given a cart of 100 reais
     When I apply "15OFF"
     Then the total is 85 reais
+    And the promotion usage count is 1
