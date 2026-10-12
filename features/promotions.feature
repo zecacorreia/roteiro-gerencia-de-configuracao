@@ -21,3 +21,8 @@ Feature: Promotions
   Scenario: Promotion expires
     Given a promotion with end date yesterday
     Then it is not applicable
+
+  Scenario: Promotion applies to cart
+    Given a cart of 100 reais
+    When I apply "15OFF"
+    Then the total is 85 reais
